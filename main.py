@@ -1,5 +1,4 @@
 import pygame
-from pygame import mouse
 from pygame.locals import *
 
 GRID = [
@@ -92,6 +91,9 @@ class Square(pygame.sprite.Sprite):
     @property
     def is_tree(self):
         return self.text_idx == 2
+
+    def set_tree(self):
+        self.text_idx = 2
 
 
 def render(screen, squares, borders):
